@@ -38,12 +38,12 @@ public class BookService extends TransactionSessionUtil implements BookDao {
 
         Query query = session.createNativeQuery(sql).addEntity(Book.class);
 
-        List<Book> addressList = query.list();
+        List<Book> bookList = query.list();
 
         //close session with a transaction
         closeTransactionSession();
 
-        return addressList;
+        return bookList;
 
     }
 
